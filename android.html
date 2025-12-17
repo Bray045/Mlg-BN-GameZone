@@ -14,384 +14,354 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7261622488614329"
-     crossorigin="anonymous"></script>
 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXK88W3Y16"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KXK88W3Y16');
-</script>
-
-  <title>Jeux Android - | Mlg BN GameZone</title>
+  <title>Jeux Android & IOS - | Mlg BN GameZone</title>
   <style>
-    
       body {
-        background-color: black;
-        color: #09993a;
-        font-family: Arial, sans-serif;
+        font-family: Arial, Sans-Serif;
+        background-color: black; 
+        color: #9900ff;
+        margin: 0;
       }
-      h1 {
-        text-align: center;
+     h1 {
+       text-align: center;
+       color: white;
+       background:   linear-gradient(90deg,#00f0ff,#9900ff);       
+        text-shadow: 0 0 10px #00f;
+        padding: 20px;
+        margin: auto;
+        font-size: 35px;
       }
       h2 {
-        color: #09993a;
-        text-align: center;
+        color: #9900ff;
+        text-shadow: 0 0 10px #00ff;
+        margin: 0px 5px;
       }
       h3 {
         text-align: center;
-        color: #09993a;
+        margin: 2px;
       }
       p {
+        text-align: center;
         color: white;
+      }
+      a {
+        color: #00f0ff;
+        text-decoration: none;
+      }
+      .game-cadre {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 15px;
+      }
+      .game-titre {
+        color: #00f0ff;
+        font-weight: bold;
+        text-shadow: 0 0 10px #00f0ff;
+        background: #0a0a1a;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 5px;
         text-align: center;
       }
-      .button {
+      .game-cadre img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .game {
+        position: relative;
         border: none;
         border-radius: 15px;
-        background-color: #09993a;
-        text-decoration: none;
-        color: black;
+        background: #1a0a3a;
+        transition: transform 0.3s, box-shadow 0.3s;
+        height: 120px;
+        min-width: 220px;
+        overflow: hidden;
+        cursor: pointer;
+     }
+      .game:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #0099ff;
+      }
+      .bouton-cadre{
+        display: flex;
         font-weight: bold;
-        display: block;
-        padding: 20px;
+        gap: 10px;
+        overflow-x: auto;
+      }
+      .bouton {
+        border-radius: 10px;
+        background: #9900ff;
+        color: white;
         text-align: center;
-        margin: 15px auto;
-        width: 250px;
+        font-size: 12px;
+        padding: 10px 25px;
+        cursor: pointer;
       }
-      .ligne {
-        border: 1px solid #09993a;
-        margin: 15px;
+      .bouton:hover {
+        transform: scale (1.05);
+        color: #00f;
+        box-shadow: 0 0 20px #00f;
       }
-    header {
-    background: #111;
-    padding: 15px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-   }
- .sub-categories {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 10px;
-  background: #141414;
-}
-.sub-categories button {
-  background: #222;
-  color: #fff;
-  border: none;
-  padding: 10px 8px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
-}
-.sub-categories button.active {
-  background: #09993a;
-}
-.games-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-  padding: 20px;
-}
-.game-card {
-  background: #1c1c1c;
-  border-radius: 10px;
-  text-align: center;
-  padding: 10px;
-  transition: transform 0.3s;
-}
-.game-card:hover {
-  transform: scale(1.05);
-}
-.game-card img {
-  width: 100%;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-.download-btn {
-  display: inline-block;
-  margin-top: 8px;
-  padding: 5px 10px;
-  background: #09993a;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-} quiz, .comments {
-      background-color: #111;
-      padding: 20px;
-      margin: 30px auto;
-      border-radius: 10px;
-      max-width: 600px;
-    }
-    btn-download {
-      background-color: #09993a;
-      color: #0a0a0a;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 10px;
-      text-decoration: none;
-      display: inline-block;
-       margin-top: 15px;
-      font-weight: bold;
-    }
-    .quiz, .comments {
-      background-color: #111;
-      padding: 20px;
-      margin: 30px auto;
-      border-radius: 10px;
-      max-width: 600px;
-    }
-    .quiz h2, .comments h2 {
-      color: #09993a;
-    }
-    .quiz button {
-      margin: 5px;
-      padding: 10px 25px;
-      border: none;
-      border-radius: 10px;
-      background-color: #09993a;
-      color: black;
-      cursor: pointer;
-    }
-    .comment-box {
-      width: 100%;
-      padding: 10px;
-      border-radius: 10px;
-      border: none;
-      margin-bottom: 10px;
-    }
-    footer {
-      text-align: center;
-      background-color: #111;
-      padding: 10px;
-      font-size: 14px;
-      color: #ccc;
-    }
+      .mini-jeux-cadre {
+        color: white;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        padding: 10px;
+      }
+      .mini-jeux {
+        background: #1a0a3a;
+        font-size: 20px;
+        border-radius: 10px;
+        height: 100px;
+        width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      } 
+      .jeux-cadre {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding: 15px;
+        background: #555;
+        border-radius: 10px;
+      }
+      .jeux-titre {
+        color: #00f0ff;
+        font-weight: bold;
+        text-shadow: 0 0 10px #00f0ff;
+        background: #0a0a1a;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: 5px;
+        text-align: center;
+      }
+      .jeux-cadre img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .jeux {
+        position: relative;
+        border: none;
+        border-radius: 15px;
+        background: #1a0a3a;
+        transition: transform 0.3s, box-shadow 0.3s;
+        height: 90px;
+        min-width: 90px;
+        overflow: hidden;
+        cursor: pointer;
+     }
+      .jeux:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #0099ff;
+      }
     </style>
-  </head>
-  <body>
-    <h2> Mlg BN GameZone - Android game</h2>
-    <p> Découvez vos jeux Android entièrement téléchargeable sur des liens sécuriser</p>
-    <div class="ligne"></div>
-    <h3>Nos Catégorie</h3>
-    <p> Découvez vos jeux par Catégorie</p>
-   <div class="ligne"></div>
-   <div class="sub-categories">
-  <button class="sub-btn active" data-sub="sport">⚽ Sport</button>
-  <button class="sub-btn" data-sub="strategie">🧠 Stratégie</button>
-  <button class="sub-btn" data-sub="rpg">🧙 RPG & Monde Ouvert</button>
-  <button class="sub-btn" data-sub="aventure">🧭 Aventure</button>
-  <button class="sub-btn" data-sub="action">⚔️ Action</button>
-  <button class="sub-btn" data-sub="arcade">🕹 Arcade</button>
-  <button class="sub-btn" data-sub="reflexion">🧩 Réflexion</button>
-</div>
-
-<div class="games-container" id="games-display"></div>
-
-<script>
-const gamesData = {
-  "sport":[
-    { title:"FIFA Mobile", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/fifa-mobile/com.ea.gp.fifamobile/" },
-    { title:"Dream League Soccer 2024", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/dream-league-soccer-2024/com.firsttouchgames.dls7/" },
-    { title:"Soccer Stars", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/soccer-stars/com.miniclip.soccerstars/" },
-    { title:"Basketball Stars", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/basketball-stars/com.miniclip.basketballstars/" },
-    { title:"8 Ball Pool", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/8-ball-pool/com.miniclip.eightballpool/" },
-    { title:"Golf Clash", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/golf-clash/com.playdemic.golf.android/" },
-    { title:"Head Soccer", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/head-soccer/dnd.and.headsoccer/" },
-    { title:"Table Tennis 3D", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/table-tennis-3d/pingpong.tennis.tabletennis/" },
-    { title:"Bowling King", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/bowling-king/com.pnixgames.bowlingking/" },
-    { title:"Mini Football", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/mini-football/com.miniclip.minifootball/" }
-  ],
-  "strategie":[
-    { title:"Clash of Clans", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/clash-of-clans/com.supercell.clashofclans/" },
-    { title:"Clash Royale", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/clash-royale/com.supercell.clashroyale/" },
-    { title:"Boom Beach", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/boom-beach/com.supercell.boombeach/" },
-    { title:"Mobile Legends", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/mobile-legends/com.mobile.legends/" },
-    { title:"Kingdom Rush", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/kingdom-rush/com.ironhidegames.android.kingdomrush/" },
-    { title:"Plants vs Zombies 2", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/plants-vs-zombies-2/com.ea.game.pvz2_row/" },
-    { title:"Hearthstone", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/hearthstone/com.blizzard.wtcg.hearthstone/" },
-    { title:"Star Wars: Galaxy of Heroes", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/star-wars-galaxy-of-heroes/com.ea.game.starwarscapital_row/" },
-    { title:"Chess Rush", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/chess-rush/com.tencent.chessrush/" },
-    { title:"Lords Mobile", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/lords-mobile/com.igg.android.lords/" }
-  ],
-  "rpg":[
-    { title:"Genshin Impact", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/genshin-impact/com.miHoYo.GenshinImpact/" },
-    { title:"AFK Arena", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/afk-arena/com.lilithgames.hgame.gp/" },
-    { title:"Black Desert Mobile", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/black-desert-mobile/com.pearlabyss.blackdesertm/" },
-    { title:"Summoners War", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/summoners-war/com.com2us.smon.normal.freefull.google.kr.android.common/" },
-    { title:"Raid: Shadow Legends", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/raid-shadow-legends/com.plarium.raidlegends/" },
-    { title:"Lineage 2: Revolution", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/lineage-2-revolution/com.ncsoft.lineage2m/" },
-    { title:"Epic Seven", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/epic-seven/com.smilegate.epicseven.google/" },
-    { title:"Tales of Crestoria", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/tales-of-crestoria/jp.co.bandainamcoent.talescrestoria.android/" },
-    { title:"The Seven Deadly Sins", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/the-seven-deadly-sins/com.netmarble.nanagb/" },
-    { title:"V4", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/v4/com.nexon.v4global/" }
-  ],
-  "aventure":[
-    { title:"Minecraft", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/minecraft/com.mojang.minecraftpe/" },
-    { title:"Terraria", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/terraria/com.and.games505.TerrariaPaid/" },
-    { title:"Don't Starve: Pocket Edition", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/dont-starve-pocket-edition/com.kleientertainment.doNotStarvePocket/" },
-    { title:"Grimvalor", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/grimvalor/com.dreadlocks.grimvalor/" },
-    { title:"Crashlands", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/crashlands/com.butchersoft.crashlands/" },
-    { title:"Oceanhorn", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/oceanhorn/com.fdg.oceanhorn.gp/" },
-    { title:"Ravensword", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/ravensword/com.earthshine.RavenswordShadowlands/" },
-    { title:"Soul Knight", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/soul-knight/com.ChillyRoom.DungeonShooter/" },
-    { title:"The Room: Old Sins", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/the-room-old-sins/com.FireproofStudios.TheRoom4/" },
-    { title:"Evoland 2", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/evoland-2/com.shirogames.evoland2/" }
-  ],
-  "action":[
-  { title:"Call of Duty Mobile", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/call-of-duty-mobile/com.activision.callofduty.shooter/" },
-  { title:"PUBG Mobile", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/pubg-mobile/com.tencent.ig/" },
-  { title:"Garena Free Fire", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/free-fire/com.dts.freefireth/" },
-  { title:"Shadowgun Legends", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/shadowgun-legends/com.madfingergames.legends/" },
-  { title:"Modern Combat 5", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/modern-combat-5/com.gameloft.android.ANMP.GloftM5HM/" },
-  { title:"Dead Trigger 2", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/dead-trigger-2/com.madfingergames.deadtrigger2/" },
-  { title:"Into the Dead 2", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/into-the-dead-2/com.pikpok.dr2/" },
-  { title:"N.O.V.A. Legacy", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/n-o-v-a-legacy/com.gameloft.android.ANMP.GloftNOHM/" },
-  { title:"Gangstar New Orleans", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/gangstar-new-orleans/com.gameloft.android.GloftG5HM/" },
-  { title:"Zombie Frontier 3", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/zombie-frontier-3/com.ftgames.zombiefrontier3/" }
-],
-"arcade":[
-  { title:"Subway Surfers", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/subway-surfers/com.kiloo.subwaysurf/" },
-  { title:"Fireboy and Watergirl", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/fireboy-and-watergirl/com.gameloft.fireboywatergirl/" },
-  { title:"Moto X3M", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/moto-x3m/com.primegames.motox3m/" },
-  { title:"Basketball Stars", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/basketball-stars/com.miniclip.basketballstars/" },
-  { title:"Shell Shockers", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/shell-shockers/com.yendis.games.shellshockers/" },
-  { title:"Rooftop Snipers", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/rooftop-snipers/com.tastypill.rooftopsnipers/" },
-  { title:"Zombs Royale", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/zombs-royale/com.yendis.zombsroyale/" },
-  { title:"Parking Fury", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/parking-fury/com.ramdroid.parkingfury/" },
-  { title:"Papa’s Freezeria", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/papas-freezeria/com.flipline.papasfreezeria/" },
-  { title:"Knife Hit", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/knife-hit/com.ketchapp.knifehit/" }
-],
-"reflexion":[
-  { title:"Brain Out", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/brain-out/com.uncle.arts.brain.out/" },
-  { title:"Flow Free", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/flow-free/com.bigduckgames.flowfree/" },
-  { title:"Monument Valley", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/monument-valley/com.ustwo.monumentvalley/" },
-  { title:"Cut the Rope", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/cut-the-rope/com.zeptolab.ctr.ads/" },
-  { title:"Brain Test", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/brain-test/com.unico.brain.test/" },
-  { title:"The Room", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/the-room/com.fireproofstudios.theroomandroid/" },
-  { title:"Sudoku.com", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/sudoku-com/com.easybrain.sudoku.android/" },
-  { title:"2048", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/2048/com.dropthebit.2048/" },
-  { title:"Brain Test 2", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/brain-test-2/com.unico.brain.test2/" },
-  { title:"Logic Master", img:"https://via.placeholder.com/150", link:"https://apkcombo.com/fr/logic-master/com.logic.master/" }
-],
-
-  // ⚔️ Action, 🕹 Arcade, 🧩 Réflexion à ajouter de la même manière
-};
-
-// Fonction pour afficher les jeux
-const displayGames = (category) => {
-  const container = document.getElementById("games-display");
-  container.innerHTML = "";
-  gamesData[category].forEach(game => {
-    const card = document.createElement("div");
-    card.classList.add("game-card");
-    card.innerHTML = `
-      <img src="${game.img}" alt="${game.title}">
-      <h3>${game.title}</h3>
-      <a href="${game.link}" target="_blank" class="download-btn">Télécharger</a>
-    `;
-    container.appendChild(card);
-  });
-};
-
-// Affichage initial
-displayGames("sport");
-
-// Gestion des boutons sous-catégorie
-document.querySelectorAll(".sub-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    document.querySelectorAll(".sub-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    displayGames(btn.dataset.sub);
-  });
-});
-</script>
-      <a href="index.html" style="display:inline-block; padding:10px 25px; background-color:#09993a; color:#0a0a0a; text-decoration:none; font-weight:bold; border-radius:25px; margin:5px;"> Accueil</a>
+    </head>
+    <body>
+    <h2> . Jeux mobile à télécharger</h2>
+  <div class="game-cadre">
+    <div class="game">
+      <img src=image4.jpg>
+     <div class="game-titre"> Télécharger</div>
     </div>
-
-   <div id="quiz2" style="max-width: 600px; margin: 50px auto; background-color: #111; padding: 20px; border-radius: 10px; color: white;">
-  <h2 style="color: #09993a;">🧠 Quiz Android 2 – Tu connais vraiment ?</h2>
-  <div id="q2-question" style="margin-top: 20px; font-size: 1.1em;"></div>
-  <div id="q2-answers" style="margin-top: 15px;"></div>
-  <div id="q2-score" style="margin-top: 20px; font-weight: bold;"></div>
-</div>
-
-<script>
-  const quiz2Questions = [
-    {
-      question: "Quel jeu permet de livrer des cargaisons en camion ?",
-      answers: ["Truck Simulator", "Clash of Clans", "Stumble Guys"],
-      correct: 0
-    },
-    {
-      question: "Dans quel jeu escalade-t-on des immeubles sans fin ?",
-      answers: ["G-Switch 4", "Tower Jump", "Hill Climb Racing"],
-      correct: 1
-    },
-    {
-      question: "Quel jeu est un puzzle à base de bonbons ?",
-      answers: ["Candy Crush", "PUBG Mobile", "Asphalt 8"],
-      correct: 0
-    },
-    {
-      question: "Lequel est un jeu multijoueur fun et coloré ?",
-      answers: ["GTA San Andreas", "Among Us", "Pou"],
-      correct: 1
-    },
-    {
-      question: "Dans quel jeu faut-il survivre contre des zombies ?",
-      answers: ["Minecraft PE", "Just Dance Now", "Into the Dead 2"],
-      correct: 2
-    }
-  ];
-
-  let quiz2Current = 0, quiz2Score = 0;
-
-  function showQuiz2() {
-    const q = quiz2Questions[quiz2Current];
-    document.getElementById("q2-question").innerText = q.question;
-    const answersDiv = document.getElementById("q2-answers");
-    answersDiv.innerHTML = "";
-
-    q.answers.forEach((ans, i) => {
-      const btn = document.createElement("button");
-      btn.innerText = ans;
-      btn.style = "margin: 5px; padding: 10px 15px; border: none; border-radius: 5px; background-color: #09993a; color: black; cursor: pointer;";
-      btn.onclick = () => {
-        if (i === q.correct) quiz2Score++;
-        quiz2Current++;
-        if (quiz2Current < quiz2Questions.length) {
-          showQuiz2();
-        } else {
-          document.getElementById("q2-question").innerText = "🎉 Quiz terminé !";
-          answersDiv.innerHTML = "";
-          document.getElementById("q2-score").innerText = `Ton score : ${quiz2Score}/5`;
-        }
-      };
-      answersDiv.appendChild(btn);
-    });
-  }
-
-  showQuiz2();
-</script>
-    <div class="comments">
-      <h2>💬 Laisse un commentaire</h2>
-      <textarea class="comment-box" rows="2" placeholder="Écris ton avis ici..."></textarea><br>
-      <button class="btn-download" style="background-color: #09993a; color: #000; padding: 10px 25px; border: none; border-radius: 10px;">Envoyer</button>
+    <div class="game">
+      <img src=image2.jpg>
+     <div class="game-titre"> Télécharger</div>
     </div>
+    <div class="game">
+      <img src=image3.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>
+    <div class="game">
+      <img src=image1.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>
+    <div class="game">
+      <img src=image4.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>
+    <div class="game">
+      <img src=image4.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>
+    
+  </div>
+  <h3> Nos Catégories</h3>
+  <div class="bouton-cadre">
+   <div class="bouton"> Sport</div>
+   <div class="bouton"> Aventure</div>
+   <div class="bouton"> Strategie</div>
+   <div class="bouton"> Reflexion</div>
+   <div class="bouton"> Course</div>
+   <div class="bouton"> Simulation</div>
+   <div class="bouton"> Gourmand</div>
+   <div class="bouton"> Multiplayer</div>
+   <div class="bouton"> Casual</div>
+ </div>
+ 
+  <div class="jeux-cadre">
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image2.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image3.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image1.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+  </div>
 
-</form>
-  </section>
-    <footer>
-    <p>&copy; 2025 Mlg BN GameZone - Tous droits réservés</p>
-  </footer>
-</body>
-</html>
+<div class="jeux-cadre">
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image2.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image3.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image1.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+  </div>
+  
+  <div class="jeux-cadre">
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image2.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image3.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image1.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+    <div class="jeux">
+      <img src=image4.jpg>
+     <div class="jeux-titre"> Télécharger</div>
+    </div>    
+  </div>
+</div> 
+<h2> Jeux Populaire</h2>
+ <div class="game-cadre">
+    <div class="game">
+      <img src=image4.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>
+    <div class="game">
+      <img src=image2.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>
+    <div class="game">
+      <img src=image3.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>
+    <div class="game">
+      <img src=image1.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>
+    <div class="game">
+      <img src=image4.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>
+    <div class="game">
+      <img src=image4.jpg>
+     <div class="game-titre"> Télécharger</div>
+    </div>    
+  
+    </body>
+  </html>
