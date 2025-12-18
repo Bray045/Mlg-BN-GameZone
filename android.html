@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  
- <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RHL3YJ1R8W"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RHL3YJ1R8W');
-</script>
-  
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jeux Android & iOS | MLG BN GameZone</title>
@@ -94,7 +83,7 @@ h1 {
   object-fit: cover;
 }
 
-/* INFO JEU */
+/* INFO JEU grands cadres */
 .game-info {
   position: absolute;
   bottom: 0;
@@ -133,13 +122,13 @@ h1 {
   transform: scale(0.95);
 }
 
-/* MINI-CADRES JEUX PAR CATEGORIE */
+/* MINI-CADRES JEUX PAR CATEGORIE avec overlay */
 .category-game {
   position: relative;
   border-radius: 10px;
   background: #1a0a3a;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 150px;
   flex: 0 0 auto;
   overflow: hidden;
   cursor: pointer;
@@ -150,18 +139,42 @@ h1 {
 
 .category-game img {
   width: 100%;
-  height: 60%;
+  height: 100%;
   object-fit: cover;
 }
 
-.category-game p {
-  font-size: 10px;
-  margin: 2px;
+/* Overlay info sur image */
+.category-game .game-info-mini {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(10,10,26,0.8);
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.category-game .game-info-mini h4 {
+  margin: 2px 0;
+  font-size: 12px;
+  color: #00f0ff;
+}
+
+.category-game .game-info-mini p {
+  margin: 2px 0 4px;
+  font-size: 9px;
   color: #ddd;
 }
 
-.category-game a {
-  font-size: 11px;
+.category-game .game-info-mini a.btn-telecharger {
+  font-size: 10px;
+  padding: 4px 5px;
+  display: block;
+  text-align: center;
+  background: linear-gradient(90deg,#00f0ff,#9900ff);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 2px;
 }
 </style>
 </head>
@@ -172,18 +185,16 @@ h1 {
 
 <h2>🔥 Jeux Populaires</h2>
 <div class="game-cadre" id="popularGames">
-  <!-- Exemples de jeux populaires -->
   <div class="game">
-    <img src="https://play-lh.googleusercontent.com/8oJZB3tqgGkJzP9BzYyZ3gA0J9F4LJxZzXHn7Z6P0w=w526-h296-rw" alt="FC Mobile">
+    <img src="_fb954ae5-5e4a-409e-ae2e-02ba410a517b.jpg" alt="FC Mobile">
     <div class="game-info">
       <h4>FC Mobile</h4>
       <p>Football réaliste avec équipes officielles.</p>
       <a class="btn-telecharger" href="https://play.google.com/store/apps/details?id=com.ea.gp.fifamobile" target="_blank">📥 Télécharger</a>
     </div>
   </div>
-
   <div class="game">
-    <img src="_fb954ae5-5e4a-409e-ae2e-02ba410a517b.jpg" alt="Minecraft">
+    <img src="https://play-lh.googleusercontent.com/6G5cWJxZ8JZ9xg5s9d5Lw=w526-h296-rw" alt="Minecraft">
     <div class="game-info">
       <h4>Minecraft</h4>
       <p>Jeu sandbox créatif et survie multijoueur.</p>
@@ -206,13 +217,10 @@ h1 {
 </div>
 
 <h2>📦 Jeux par Catégorie</h2>
-<div class="game-cadre" id="categoryGames">
-  <!-- Ici s'afficheront les mini-cadres (jeux de toutes sortes) -->
-</div>
+<div class="game-cadre" id="categoryGames"></div>
 
 <h2>🆕 Nouveaux Jeux</h2>
 <div class="game-cadre" id="newGames">
-  <!-- Exemples nouveaux jeux -->
   <div class="game">
     <img src="https://play-lh.googleusercontent.com/2Q7xgU9a1wLzJb9mM8qv=w526-h296-rw" alt="Asphalt 8">
     <div class="game-info">
@@ -224,9 +232,7 @@ h1 {
 </div>
 
 <h2>🎯 Jeux de la catégorie sélectionnée</h2>
-<div class="game-cadre" id="filteredCategory">
-  <!-- Jeux filtrés apparaissent ici après clic sur catégorie -->
-</div>
+<div class="game-cadre" id="filteredCategory"></div>
 
 <script>
 // Liste des jeux (nom, image, catégorie, description, lien)
@@ -239,37 +245,33 @@ const games = [
   {nom: "Call of Duty Mobile", img:"https://play-lh.googleusercontent.com/efgh=w526-h296-rw", categorie:"Multiplayer", description:"FPS multijoueur intense sur mobile.", lien:"#"}
 ];
 
-// Générer mini-cadres dans Jeux par Catégorie
-const categoryGamesContainer = document.getElementById("categoryGames");
-games.forEach(game => {
+// Fonction pour créer un mini-cadre
+function createMiniGameCard(game) {
   const div = document.createElement("div");
   div.className = "category-game";
   div.innerHTML = `
     <img src="${game.img}" alt="${game.nom}">
-    <p>${game.nom}</p>
-    <p>${game.description}</p>
-    <a class="btn-telecharger" href="${game.lien}" target="_blank">📥 Télécharger</a>
+    <div class="game-info-mini">
+      <h4>${game.nom}</h4>
+      <p>${game.description}</p>
+      <a class="btn-telecharger" href="${game.lien}" target="_blank">📥 Télécharger</a>
+    </div>
   `;
-  categoryGamesContainer.appendChild(div);
-});
+  return div;
+}
+
+// Générer mini-cadres dans Jeux par Catégorie
+const categoryGamesContainer = document.getElementById("categoryGames");
+games.forEach(game => categoryGamesContainer.appendChild(createMiniGameCard(game)));
 
 // Fonction pour filtrer par catégorie
 function filterCategory(categorie) {
   const container = document.getElementById("filteredCategory");
   container.innerHTML = "";
-  games.filter(game => game.categorie === categorie).forEach(game => {
-    const div = document.createElement("div");
-    div.className = "game";
-    div.innerHTML = `
-      <img src="${game.img}" alt="${game.nom}">
-      <div class="game-info">
-        <h4>${game.nom}</h4>
-        <p>${game.description}</p>
-        <a class="btn-telecharger" href="${game.lien}" target="_blank">📥 Télécharger</a>
-      </div>
-    `;
-    container.appendChild(div);
-  });
+  games.filter(game => game.categorie === categorie)
+       .forEach(game => container.appendChild(createMiniGameCard(game)));
+  // Scroll vers le bas pour voir les jeux filtrés
+  container.scrollIntoView({behavior: "smooth"});
 }
 </script>
 
